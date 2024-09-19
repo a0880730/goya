@@ -23,7 +23,7 @@
         </div>
         <div class="_item company-name">
             <span>公司名稱</span>
-            <span>果亞創意設計公司</span>
+            <span>果亞創意有限公司</span>
         </div>
         <div class="_item company-id">
             <span>統一編號</span>
