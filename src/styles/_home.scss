@@ -1,0 +1,105 @@
+body {
+  background-color: #2194a9;
+}
+
+.home-page {
+  background-image: url("../assets/bg.jpg");
+  background-size: 100% 100%;
+  margin: 0 auto;
+  max-width: 700px;
+  min-height: calc(100vh - 20px);
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  ._header {
+    img {
+      max-width: calc(100% - 40px);
+    }
+  }
+  ._title {
+    display: flex;
+    justify-content: center;
+    img {
+      height: 28vh;
+      margin-left: 24%;
+    }
+  }
+
+  ._name {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 26px;
+    font-family: "Microsoft JhengHei";
+    font-weight: 600;
+  }
+
+  ._content {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    ._item {
+      position: relative;
+      background-color: #fff;
+      padding: 18px 20px;
+      border-radius: 50px;
+      margin-left: 60px;
+      margin-right: 10px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+
+      @media (max-width: 400px) {
+        margin-left: 50px;
+        margin-right: 0;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -55px;
+        top: 0;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        width: 58px;
+        height: 100%;
+        @media (max-width: 400px) {
+          left: -45px;
+          width: 55px;
+        }
+      }
+
+      &.phone::before {
+        background-image: url("../assets/cellphone.png");
+      }
+
+      &.email::before {
+        background-image: url("../assets/mail.png");
+      }
+      &.company-phone::before {
+        background-image: url("../assets/telephone.png");
+      }
+      &.company-name::before {
+        background-image: url("../assets/name.png");
+      }
+      &.company-id::before {
+        background-image: url("../assets/number.png");
+      }
+
+      span {
+        font-size: 20px;
+        font-family: "Microsoft JhengHei";
+        font-weight: 600;
+
+        @media (max-width: 400px) {
+          font-size: 16px;
+        }
+
+        &:nth-child(2) {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
